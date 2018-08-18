@@ -7,11 +7,10 @@ import com.mrn.didemo.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 // so this annotation is saying that will do a scanning
 // from this class down to all classes from all packages from all over the project
-@SpringBootApplication(scanBasePackages = {"com.mrn.services", "com.mrn.didemo"})
+@SpringBootApplication(scanBasePackages = {"com.mrn.didemo.services", "com.mrn.didemo"})
 
 public class DiDemoApplication {
 

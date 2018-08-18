@@ -1,4 +1,4 @@
-package com.mrn.services;
+package com.mrn.didemo.services;
 
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package com.mrn.didemo.controllers;
 
-import com.mrn.services.GreetingServiceImpl;
+import com.mrn.didemo.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,13 +12,13 @@ public class PropertyInjectedControllerTest {
     private PropertyInjectedController propertyInjectedController;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         this.propertyInjectedController = new PropertyInjectedController();
         this.propertyInjectedController.greetingService = new GreetingServiceImpl();
     }
 
     @Test
-    public void testGreeting() throws Exception {
+    public void testGreeting() {
         assertEquals(GreetingServiceImpl.HIELO_ME, propertyInjectedController.sayHello());
     }
 }

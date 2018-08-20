@@ -1,0 +1,10 @@
+# fake yaml example for data source properties
+# this will pe picked up automatically by stream
+# Spring boot will search for a file which starts with application.yml and will read the properties
+# application.properties and application.yml are on the same turn (equal files) will both be picked up by
+# spring and spring boot
+mrn:
+  jms:
+    user: jms user
+    pass: betty pass
+    url: some url

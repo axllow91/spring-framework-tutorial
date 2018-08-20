@@ -1,0 +1,41 @@
+# this is a comment in yaml
+
+# property
+name: John
+
+names: # comment here
+- John
+- Paul
+- Mikael
+pound_sign: "#"  # this will be a value
+
+book:
+  author: Joe Someonelse
+  publisher: Random Nradom
+
+# boolean property
+truth: yes
+
+# boolean
+another_truth: True
+
+more_true: true
+
+false: no #No, false, FALSE
+
+string_val: "This is a quote"
+
+colon_string: "my courses: one two three"
+
+include_new_lines: | #this symbol will include new lines
+  asdasdasdas
+  asdasdasda
+  asdasdasdas
+
+ignore_new_lines: > # this symbol will ignore new lines
+  asdasdas
+  dasdasd
+  string string string string string
+
+
+

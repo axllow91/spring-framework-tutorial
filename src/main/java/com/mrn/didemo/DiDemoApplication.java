@@ -2,6 +2,7 @@ package com.mrn.didemo;
 
 import com.mrn.didemo.controllers.MyController;
 import com.mrn.didemo.examplebeans.FakeDataSource;
+import com.mrn.didemo.examplebeans.FakeJMSBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -26,6 +27,9 @@ public class DiDemoApplication {
 //        System.out.println(controller.hello());
 
         FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
-        System.out.println(fakeDataSource);
+        System.out.println(fakeDataSource.getUsername());
+
+        FakeJMSBroker fakeJMSBroker = ctx.getBean(FakeJMSBroker.class);
+        System.out.println(fakeJMSBroker.getUser());
     }
 }

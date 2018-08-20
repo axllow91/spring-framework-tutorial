@@ -30,8 +30,4 @@ public class FakeDataSource {
         this.url = url;
     }
 
-    @Override
-    public String toString() {
-        return username;
-    }
 }

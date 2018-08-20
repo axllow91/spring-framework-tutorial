@@ -5,9 +5,6 @@ import com.mrn.didemo.examplebeans.FakeJMSBroker;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 // Java configuration
 @Configuration
@@ -17,11 +14,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 // we use curly braces for multiple property sources {"1", "2",...}
 //@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
 
-@PropertySources({ // available from spring 4.0
-        @PropertySource("classpath:datasource.properties"),
-        @PropertySource("classpath:jms.properties")
-})
 public class PropertyConfig {
+
 
     // value of the properties
     @Value("${mrn.username}")
@@ -64,11 +58,11 @@ public class PropertyConfig {
     }
 
     // Allow us to autowire up by value
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties() {
-        // configure the new place holder configuration
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
-    }
+//    @Bean
+//    public static PropertySourcesPlaceholderConfigurer properties() {
+//        // configure the new place holder configuration
+//        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
+//        return propertySourcesPlaceholderConfigurer;
+//    }
 
 }
